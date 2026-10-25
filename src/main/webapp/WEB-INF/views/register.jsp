@@ -1,0 +1,6 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>สมัครสมาชิก | MyPocket</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style.css"></head>
+<body class="auth-bg"><main class="auth-card"><div class="brand-mark">฿</div><h1>สร้างบัญชีใหม่</h1><p class="muted">เริ่มจัดการเงินของคุณวันนี้</p>
+<% if(request.getAttribute("error")!=null){ %><div class="alert"><%= request.getAttribute("error") %></div><% } %>
+<form method="post" action="${pageContext.request.contextPath}/register"><label>ชื่อที่ใช้แสดง</label><input name="fullName" required maxlength="100"><label>อีเมล</label><input type="email" name="email" required autocomplete="email"><label>รหัสผ่าน (อย่างน้อย 8 ตัวอักษร)</label><input type="password" name="password" minlength="8" required autocomplete="new-password"><button class="btn primary full">สมัครสมาชิก</button></form>
+<p class="center muted">มีบัญชีแล้ว? <a href="${pageContext.request.contextPath}/login">เข้าสู่ระบบ</a></p></main></body></html>
